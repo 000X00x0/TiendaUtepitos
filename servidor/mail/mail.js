@@ -5,8 +5,8 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
     auth: {
-        user: 'anderadarve@gmail.com',
-        pass: 'ziwikichbgrhmfln'
+        user: 'utpitos@gmail.com',
+        pass: 'nzzuagemljlsojpb'
     }
 });
 
@@ -14,8 +14,8 @@ const transporter = nodemailer.createTransport({
 
 export const sendMail = prod => {
     transporter.sendMail({
-        from: "ecommerce <ecommerce@gmail.com",
-        to: "a.adarve@utp.edu.co",
+        from: "UTPitos <utpitos@gmail.com",
+        to: "juan.ganan@utp.edu.co",
         subject: "Stock at its minimun",
         text: `The following product's stock which id's is${prod.id}. is almost empty`
     }).then(console.info)
