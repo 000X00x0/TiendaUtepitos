@@ -2,16 +2,17 @@ import React, { createContext, useState } from 'react';
 import axios from 'axios';//se importa axios para generar peticiones al servidor
 import { useEffect } from 'react';
 
-export const ShopContext = createContext(null);
+export const ShopContext = createContext(null); //contexto de la tienda, funciones y hooks 
 const URI = 'http://localhost:3001/products/';//esta sera la ruta a la cual se generaran peticiones en este caso sera para los productos
 
-const getDefaultCart = () => {//se crea un arreglo que se usara para darle una cantidad a cada producto esto, cada posicion del arreglo contendra un cero como cantidad
-    let cart = {}
-    for(let i = 1; i < 12 ; i++) {
-        cart[i] = 0
+const getDefaultCart = () => {  // Función para obtener un carrito por defecto con todas las cantidades de productos establecidas en cero
+    let cart = {}  // Objeto para almacenar las cantidades de productos del carrito
+    for (let i = 1; i < 12; i++) {  // Iteramos desde 1 hasta 11 (12 productos en total)
+        cart[i] = 0  // Establecemos la cantidad del producto i en cero
     }
-    return cart;
+    return cart;  // Retornamos el carrito por defecto con las cantidades de productos establecidas en cero
 };
+
 
 export const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart()); //aqui se almacenaran los productos ingresados dentro del carrito
