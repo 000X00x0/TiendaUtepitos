@@ -1,5 +1,5 @@
 import Stripe from "stripe";//portal de pagos para conectarse a su api
-const striper = Stripe('sk_test_51MXhMwE3qnA4gieV1zddEIRQEaSU2Ro4yVhovCZZGzuLKMvnkc1pmksgMB0B2hcPnogMWw4zzYAoiUK0trTZ7rCY00jHqdr6ZV');//clave de acceso stripe para recibir el pago
+const striper = Stripe('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');//clave de acceso stripe para recibir el pago
 
 
 //funcion que permite conectarse a la api y realizar los pagos
