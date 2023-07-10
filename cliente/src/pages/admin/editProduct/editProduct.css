@@ -1,79 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
 .shop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
+    display: flex; /* Mostrar como flexbox */
+    flex-direction: column; /* Orientación de columna */
+    align-items: center; /* Centrar elementos horizontalmente */
+    margin-top: 50px; /* Margen superior */
 }
 
 .shopTitle {
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: center; /* Alinear texto al centro */
+    margin-bottom: 30px; /* Margen inferior */
 }
 
 .shopTitle h1 {
-    color: #333;
-    font-size: 24px;
+    color: #333; /* Color de texto */
+    font-size: 24px; /* Tamaño de fuente */
 }
 
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    display: grid; /* Mostrar como grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas con tamaño mínimo y máximo */
+    gap: 20px; /* Espaciado entre elementos */
 }
 
 .product {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+    border: 1px solid #ccc; /* Borde del producto */
+    border-radius: 5px; /* Borde redondeado del producto */
+    padding: 20px; /* Espaciado interno del producto */
 }
 
 .slide-var ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    list-style: none; /* Eliminar los estilos de la lista */
+    padding: 0; /* Espaciado interno de la lista */
+    margin: 0; /* Margen de la lista */
+    display: flex; /* Mostrar los elementos de la lista en línea */
 }
 
 .slide-var li {
-    margin-right: 10px;
+    margin-right: 10px; /* Margen derecho de los elementos de la lista */
 }
 
 .slide-var img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100px; /* Ancho de las imágenes del carrusel */
+    height: 100px; /* Altura de las imágenes del carrusel */
+    object-fit: cover; /* Ajustar las imágenes al tamaño especificado */
+    border: 1px solid #ccc; /* Borde de las imágenes del carrusel */
+    border-radius: 5px; /* Borde redondeado de las imágenes del carrusel */
 }
 
 .description p {
-    margin: 10px 0;
-    font-size: 16px;
+    margin: 10px 0; /* Margen superior e inferior de los elementos de descripción */
+    font-size: 16px; /* Tamaño de fuente de los elementos de descripción */
 }
 
 form {
-    margin-top: 10px;
+    margin-top: 10px; /* Margen superior del formulario */
 }
 
 input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Ancho del campo de texto */
+    padding: 10px; /* Espaciado interno del campo de texto */
+    margin-bottom: 10px; /* Margen inferior del campo de texto */
+    border: 1px solid #ccc; /* Borde del campo de texto */
+    border-radius: 5px; /* Borde redondeado del campo de texto */
 }
 
 .btn-login {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
+    background-color: #333; /* Color de fondo del botón de inicio de sesión */
+    color: #fff; /* Color de texto del botón de inicio de sesión */
+    border: none; /* Sin borde en el botón de inicio de sesión */
+    border-radius: 5px; /* Borde redondeado del botón de inicio de sesión */
+    padding: 10px 20px; /* Espaciado interno del botón de inicio de sesión */
+    cursor: pointer; /* Cursor apuntador al pasar por encima del botón de inicio de sesión */
 }
 
 .btn-login:hover {
-    background-color: #555;
+    background-color: #555; /* Color de fondo del botón de inicio de sesión al pasar por encima */
 }

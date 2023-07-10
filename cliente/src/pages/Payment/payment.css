@@ -1,22 +1,22 @@
 .FormGroup {
-	margin: 100px 15px 20px;
+	margin: 100px 15px 20px; /* Márgenes superior, derecho, inferior e izquierdo del formulario */
 	padding: 0;
 	border-style: none;
-	background-color: #7795f8;
+	background-color: #7795f8; /* Color de fondo del formulario */
 	will-change: opacity, transform;
-	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff;
-	border-radius: 4px;
+	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff; /* Sombra del formulario */
+	border-radius: 4px; /* Borde redondeado del formulario */
 }
 
 .FormRow {
-	display: flex;
-	align-items: center;
-	margin-left: 15px;
-	border-top: 1px solid #819efc;
+	display: flex; /* Mostrar los elementos en línea */
+	align-items: center; /* Alinear verticalmente los elementos en el centro */
+	margin-left: 15px; /* Margen izquierdo del formulario */
+	border-top: 1px solid #819efc; /* Borde superior del formulario */
 }
 
 .StripeElement--webkit-autofill {
-	background: transparent !important;
+	background: transparent !important; /* Estilo para el autocompletado del navegador */
 }
 
 .StripeElement {
@@ -25,21 +25,28 @@
 }
 
 .pay {
-	display: block;
-	font-size: 16px;
-	width: calc(100% - 30px);
-	height: 40px;
-	margin: 40px 15px 0;
-	background-color: #f6a4eb;
-	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6;
-	border-radius: 4px;
-	color: #fff;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all 100ms ease-in-out;
+	display: block; /* Mostrar el botón en forma de bloque */
+	font-size: 16px; /* Tamaño de fuente del botón */
+	width: calc(100% - 30px); /* Ancho del botón */
+	height: 40px; /* Altura del botón */
+	margin: 40px 15px 0; /* Márgenes superior, derecho e izquierdo del botón */
+	background-color: #f6a4eb; /* Color de fondo del botón */
+	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6; /* Sombra del botón */
+	border-radius: 4px; /* Borde redondeado del botón */
+	color: #fff; /* Color de texto del botón */
+	font-weight: 600; /* Grosor de fuente del botón */
+	cursor: pointer; /* Cursor apuntador al pasar por encima del botón */
+	transition: all 100ms ease-in-out; /* Transición suave de propiedades */
 	will-change: transform, background-color, box-shadow;
-	border: none;
+	border: none; /* Sin borde en el botón */
 }
+
+.pay:active {
+	background-color: #d782d9; /* Color de fondo del botón cuando está activo */
+	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8; /* Sombra del botón cuando está activo */
+	transform: scale(0.99); /* Escala ligeramente reducida del botón cuando está activo */
+}
+
 
 .pay:active {
 	background-color: #d782d9;
