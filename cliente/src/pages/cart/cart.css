@@ -1,4 +1,4 @@
-.cart {
+.cart {  
   position: absolute; /* Posiciona el elemento de forma absoluta */
   top: 50%; /* Centra verticalmente el elemento */
   left: 50%; /* Centra horizontalmente el elemento */
@@ -17,7 +17,7 @@
   padding: 20px; /* Espaciado interno */
 }
 
-.cart h2 {
+.cart h2 { 
   font-size: 24px; /* Tamaño de fuente del título */
   font-weight: bold; /* Grosor de fuente del título */
   margin-bottom: 10px; /* Margen inferior del título */
@@ -54,7 +54,7 @@
   border-bottom-color: #59daeb; /* Color del borde inferior al enfocar */
 }
 
-.cart button[type="submit"] {
+.cart button[type="submit"] { 
   width: 150px; /* Ancho del botón de envío */
   height: 40px; /* Alto del botón de envío */
   background-color: #162938; /* Color de fondo del botón de envío */
