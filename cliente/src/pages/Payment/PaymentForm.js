@@ -4,7 +4,7 @@ import { ShopContext } from "../../context/shop-context";
 import axios from "axios";
 import './payment.css';
 
-const CARD_OPTIONS = {//estilos para el formulario de pago
+const CARD_OPTIONS = {
 	iconStyle: "solid",
 	style: {
 		base: {
@@ -26,37 +26,38 @@ const CARD_OPTIONS = {//estilos para el formulario de pago
 
 export default function PaymentForm() {
     const context = useContext(ShopContext);
-    const [success , setSucces] = useState(false);//para saber si fue un exito o no
-    const stripe = useStripe()
-    const elements = useElements()
+    const [success , setSucces] = useState(false);// Estado para el éxito del pago
+    const stripe = useStripe();
+    const elements = useElements();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const {error, paymentMethod} = await stripe.createPaymentMethod({
-            type: "card",//se crea un metodo de pago por tarjeta
-            card: elements.getElement(CardElement) //se le da el elemento card eleemnent
-        })
+            type: "card",
+            card: elements.getElement(CardElement)
+        });
     
+        // Verificar si no hay errores en el método de pago
+        if(!error){
+            try {
+                const {id} = paymentMethod;// Obtener el ID del método de pago
+                const response = await axios.post("http://localhost:3001/payment", {
+                    amount: context.payAumount,// Monto de la compra obtenido del contexto
+                    id
+                });
 
-    if(!error){
-        try {
-            const {id} = paymentMethod//si n hay error se almacena el if de payment method
-            const response = await axios.post("http://localhost:3001/payment", { //se cre una peticion para el pago
-                amount: context.payAumount, //con el total de la compra
-                id
-            });
-
-            if (response.data.success){
-                console.log("succesful payment");
-                setSucces(true);
+                // Verificar si el pago fue exitoso
+                if (response.data.success){
+                    console.log("succesful payment");
+                    setSucces(true);// Establecer el estado de éxito en true
+                }
+            } catch (error) {
+                console.log("error", error);
             }
-        }catch (error) {
-            console.log("error",error);
+        } else {
+            console.log(error.message);
         }
-    }else {
-        console.log(error.message);
     }
-}
 
     return (
         <>
@@ -64,10 +65,10 @@ export default function PaymentForm() {
         <form onSubmit={handleSubmit}>
             <fieldset className="FormGroup">
                 <div className="FormRow">
-                    <CardElement options={CARD_OPTIONS}/>
+                    <CardElement options={CARD_OPTIONS} />
                 </div>
             </fieldset>
-            <button className="pay">Pay</button> {/*boton para pagar  */}
+            <button className="pay">Pay</button>
         </form>
         :
         <div>

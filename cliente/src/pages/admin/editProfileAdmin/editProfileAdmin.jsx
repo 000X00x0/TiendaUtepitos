@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { useState } from "react";
-
+import './editProfileAdmin.css'; // Importa el archivo CSS con el estilo
 const URIADMIN = 'http://localhost:3001/users/3/'; //aqui se hacen las peticiones para el admin
 
 const EditAdmin = () => {
