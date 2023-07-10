@@ -1,0 +1,10 @@
+
+"body-parser": "^1.20.2",  // Middleware para analizar el cuerpo de las solicitudes HTTP
+"cors": "^2.8.5",  // Middleware para habilitar CORS (Cross-Origin Resource Sharing)
+"dotenv": "^16.3.1",  // Cargar variables de entorno desde un archivo .env
+"express": "^4.18.2",  // Framework web para Node.js
+"mysql2": "^3.5.0",  // Conector MySQL para Sequelize (ORM)
+"nodemailer": "^6.9.3",  // Librería para enviar correos electrónicos
+"nodemon": "^3.0.1",  // Herramienta para reiniciar automáticamente el servidor al realizar cambios en el código fuente
+"sequelize": "^6.32.1",  // ORM (Object-Relational Mapping) para interactuar con bases de datos relacionales
+"stripe": "^11.18.0"  // Librería para interactuar con la API de Stripe (plataforma de pagos)
