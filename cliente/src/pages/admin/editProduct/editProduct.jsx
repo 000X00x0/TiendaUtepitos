@@ -3,20 +3,22 @@ import { Product } from './Product';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
-const URI = 'http://localhost:3001/products/'; //aqui se hacen las peticiones
+import './editProduct.css';
+const URI = 'http://localhost:3001/products/'; // Aquí se hacen las peticiones
 
 export const EditProduct = () => {
 
-    const[products, setProducts] = useState([]) // aqui se guardan los productos
+    const [products, setProducts] = useState([]); // Aquí se guardan los productos
+
     useEffect(() => {
-        getProduct()
+        getProduct();
     }, []);
 
-    const getProduct = async () => {//aqui se hace la solicitud
-        const res = await axios.get(URI)
-        setProducts(res.data)
-    }
+    const getProduct = async () => { // Aquí se hace la solicitud
+        const res = await axios.get(URI);
+        setProducts(res.data);
+    };
+
     return (
         <div className="shop">
             <div className="shopTitle">
@@ -24,9 +26,9 @@ export const EditProduct = () => {
             </div>
             <div className="products"> 
                 {products.map((product) => (
-                    <Product data={product} />// se muestran todos los productos que estan en el arreglo
+                    <Product data={product} /> // Se muestran todos los productos que están en el arreglo
                 ))}
             </div>
         </div>
-    )
+    );
 };

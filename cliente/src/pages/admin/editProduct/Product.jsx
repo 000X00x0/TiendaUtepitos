@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from 'axios';
-
+import './Product.css';
 const URI = 'http://localhost:3001/products/';//aqui se hacen las peticiones 
 
 export const Product = (props) => {
