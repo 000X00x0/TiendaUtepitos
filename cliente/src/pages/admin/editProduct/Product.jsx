@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from 'axios';
 import './Product.css';
-const URI = 'http://localhost:3001/products/';//aqui se hacen las peticiones 
+const URI = 'https://tienda2-0-blush.vercel.app/products/';//aqui se hacen las peticiones 
 
 export const Product = (props) => {
     const { id, nombre, precio, img1, img2, img3, stockMax, stockMin } = props.data; //aqui se guardan los datos de los productso

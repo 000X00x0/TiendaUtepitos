@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import './editProduct.css';
-const URI = 'http://localhost:3001/products/'; // Aquí se hacen las peticiones
+const URI = 'https://tienda2-0-blush.vercel.app/products/'; // Aquí se hacen las peticiones
 
 export const EditProduct = () => {
 

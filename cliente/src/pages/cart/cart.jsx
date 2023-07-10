@@ -7,7 +7,7 @@ import axios from 'axios'; // Importamos axios para hacer peticiones al servidor
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const URI = 'http://localhost:3001/products/'; // Ruta base para las peticiones al servidor
+const URI = 'https://tienda2-0-blush.vercel.app/products/'; // Ruta base para las peticiones al servidor
 
 export const Cart = () => {
     const context = useContext(ShopContext); // Obtenemos el contexto de la tienda
