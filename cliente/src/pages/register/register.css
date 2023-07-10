@@ -1,77 +1,144 @@
-.register-form{
-    width: 400px;
-    margin: 0 auto;
-    padding: 0px 20px 60px 20px;
-    margin-top: 35px;
-    font-family: roboto;
-    text-align: left !important;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
+/* Modificaciones en estilos para el elemento 'body' */
 
-.register-form h2 {
-    color: gray;
-}
-
-.btn-cancel{
-    width: 50%;
-    padding: 15px;
-    background-color: #9ca3af;
-    border: 0;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-weight: bold;
-    font-size:medium ;
-    color: white;
-    margin-top: 20px;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-}
-
-
-.btn-save{
-    width: 50%;
-    padding: 15px;
-    background-color: #1d4ed8;
-    border: 0;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-weight: bold;
-    font-size:medium ;
-    color: white;
-    margin-top: 20px;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-}
-
-.btn-cancel:hover, btn-cancel:active{
-    color: white;
-    background-color: #6b7280;
-    border-color: #6b7280;
-}
-
-.btn-cancel:focus{
-    box-shadow: 0 0 0 3px #6b7280;
-}
-
-.btn-save:hover, btn-save:active{
-    color: white;
-    background-color: #0c3078;
-    border-color: #0c3078;
-}
-
-.btn-save:focus{
-    box-shadow: 0 0 0 3px #0c3078;
-}
-
-.register-form input[type = "password"],
-.register-form input[type = "text"] {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ced4da;
-    margin-bottom:10px;
-    box-sizing: border-box;
-}
+body {
+    margin: 0; /* Elimina el margen alrededor del cuerpo del documento */
+    padding: 0; /* Elimina el relleno alrededor del cuerpo del documento */
+    display: flex; /* Establece el modelo de caja como flexible */
+    align-items: center; /* Alinea verticalmente los elementos hijos en el centro */
+    justify-content: center; /* Alinea horizontalmente los elementos hijos en el centro */
+    background: url('https://e1.pxfuel.com/desktop-wallpaper/616/918/desktop-wallpaper-deer-digtial-vector-art-forest-vector.jpg') no-repeat; /* Establece una imagen de fondo y evita que se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Alinea la imagen de fondo en el centro */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo del documento como 100% de la altura de la ventana */
+    }
+    
+    /* Modificaciones en estilos para los elementos 'input' */
+    
+    input {
+    font-family: 'Playfair Display', serif; /* Establece la fuente del texto como 'Playfair Display' o una fuente serif similar */
+    background: transparent; /* Establece el fondo del elemento como transparente */
+    border: none; /* Elimina el borde del elemento */
+    outline: none; /* Elimina el contorno alrededor del elemento cuando está enfocado */
+    border-bottom: 2px solid #162938; /* Establece un borde inferior de 2 píxeles sólido con color #162938 */
+    margin: 8px; /* Establece un margen de 8 píxeles alrededor del elemento */
+    padding: 10px; /* Establece un relleno de 10 píxeles dentro del elemento */
+    }
+    
+    /* Modificaciones en estilos para el elemento con la clase 'register-form' */
+    
+    .register-form input:focus {
+    border-bottom-color: #59daeb; /* Cambia el color del borde inferior cuando el elemento está enfocado */
+    }
+    
+    .register-form {
+    position: absolute; /* Establece la posición del elemento como absoluta */
+    top: 50%; /* Coloca el elemento en la mitad superior del padre */
+    left: 50%; /* Coloca el elemento en la mitad izquierda del padre */
+    transform: translate(-50%, -50%); /* Translada el elemento en su centro real para que quede centrado */
+    width: 600px; /* Establece un ancho fijo de 600 píxeles para el elemento */
+    max-width: 100%; /* Establece el ancho máximo del elemento como el ancho máximo disponible */
+    height: 500px; /* Establece una altura fija de 500 píxeles para el elemento*/
+    background-color: transparent; /* Establece el color de fondo del elemento como transparente */
+    border: 2px solid grey; /* Establece un borde sólido de 2 píxeles con color gris alrededor del elemento */
+    border-radius: 20px; /* Establece un radio de borde de 20 píxeles para hacerlo redondeado */
+    backdrop-filter: blur(20px); /* Aplica un desenfoque de 20 píxeles al fondo del elemento */
+    box-shadow: 0 0 30px black; /* Agrega una sombra alrededor del elemento */
+    display: flex; /* Establece el modelo de caja como flexible */
+    flex-direction: column; /* Establece la dirección de los elementos hijos como columna */
+    justify-content: center; /* Alinea verticalmente los elementos hijos en el centro */
+    }
+    
+    .register-form h2 {
+    padding: 10%; /* Establece un relleno del 10% dentro del elemento */
+    text-align: center; /* Alinea el texto en el centro */
+    font-family: 'Playfair Display', serif; /* Establece la fuente del texto como 'Playfair Display' o una fuente serif similar */
+    }
+    
+    /* Modificaciones en estilos para el elemento con la clase 'btn-login' */
+    
+    .btn-login {
+    height: 45px; /* Establece una altura fija de 45 píxeles para el elemento */
+    width: 580px; /* Establece un ancho fijo de 580 píxeles para el elemento */
+    background: #162938; /* Establece el color de fondo del elemento como #162938 */
+    border: none; /* Elimina el borde del elemento */
+    outline: none; /* Elimina el contorno alrededor del elemento cuando está enfocado */
+    border-radius: 6px; /* Establece un radio de borde de 6 píxeles para hacerlo ligeramente redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del elemento */
+    font-size: 1em; /* Establece el tamaño de fuente del texto como 1em */
+    color: #fff; /* Establece el color del texto como blanco (#fff) */
+    font-weight: 500; /* Establece el grosor de la fuente como 500 (mediano) */
+    }
+    
+    /* Modificaciones en estilos para el elemento con la clase 'btn-register' */
+    
+    .btn-register{
+    height: 45px; /* Establece una altura fija de 45 píxeles para el elemento */
+    width: 590px; /* Establece un ancho fijo de 590 píxeles para el elemento */
+    background: #162938; /* Establece el color de fondo del elemento como #162938 */
+    border: none; /* Elimina el borde del elemento */
+    outline: none; /* Elimina el contorno alrededor del elemento cuando está enfocado */
+    border-radius: 6px; /* Establece un radio de borde de 6 píxeles para hacerlo ligeramente redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del elemento */
+    font-size: 1em; /* Establece el tamaño de fuente del texto como 1em */
+    color: #fff; /* Establece el color del texto como blanco (#fff) */
+    font-weight: 500; /* Establece el grosor de la fuente como 500 (mediano) */
+    font-family: 'Playfair Display', serif; /* Establece la fuente del texto como 'Playfair Display' o una fuente serif similar */
+    }
+    
+    /* Modificaciones en estilos para el elemento con media query para pantallas con un ancho máximo de 600px */
+    
+    @media screen and (max-width: 600px) {
+    .login-form {
+    width: 70%; /* Establece un ancho del 70% para el elemento */
+    height: 50%; /* Establece una altura del 50% para el elemento */
+    padding: 9%; /* Establece un relleno del 9% dentro del elemento */
+    }
+    
+    css
+    
+    .login-form h2 {
+        padding: 3%; /* Establece un relleno del 3% dentro del elemento */
+        font-size: 1.8em; /* Establece el tamaño de fuente del texto como 1.8em */
+    }
+    
+    .btn-login{
+        height: 45px; /* Establece una altura fija de 45 píxeles para el elemento */
+        width: 380px; /* Establece un ancho fijo de 380 píxeles para el elemento */
+    }
+    
+    .btn-register{
+        height: 46px; /* Establece una altura fija de 46 píxeles para el elemento */
+        width: 385px; /* Establece un ancho fijo de 385 píxeles para el elemento */
+    }
+    
+    }
+    
+    /* Modificaciones en estilos para el elemento con media query para pantallas con un ancho máximo de 500px */
+    
+    @media screen and (max-width: 500px) {
+    .login-form {
+    width: 80%; /* Establece un ancho del 80% para el elemento */
+    height: 50%; /* Establece una altura del 50% para el elemento */
+    }
+    
+    css
+    
+    .login-form h2 {
+        font-size: 1.2em; /* Establece el tamaño de fuente del texto como 1.2em */
+        padding: 1px; /* Establece un relleno de 1 píxel dentro del elemento */
+        text-align: center; /* Alinea el texto en el centro */
+    }
+    
+    .btn-login {
+        width: 100%; /* Establece un ancho del 100% para el elemento */
+        padding: 0px; /* Elimina el relleno dentro del elemento */
+        margin: 0px; /* Elimina el margen alrededor del elemento */
+    }
+    
+    .btn-register{
+        width: 98%; /* Establece un ancho del 98% para el elemento */
+        padding: 10px; /* Establece un relleno de 10 píxeles dentro del elemento */
+        margin: 10px; /* Establece un margen de 10 píxeles alrededor del elemento */
+    }
+    
+    }

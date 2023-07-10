@@ -1,70 +1,94 @@
-.login-form, .contenedor {
-    width: 300px;
-    margin: 0 auto;
-}
+/* Modificaciones en estilos para el elemento 'body' */
 
-.login-form h2 {
-    text-align: center;
-    color: #000000;
-    font-size: 28px;
-    padding: 70px 0 10px 0;
+body {
+    margin: 0; /* Elimina el margen alrededor del cuerpo del documento */
+    padding: 0; /* Elimina el relleno alrededor del cuerpo del documento */
+    display: flex; /* Establece el modelo de caja como flexible */
+    align-items: center; /* Alinea verticalmente los elementos hijos en el centro */
+    justify-content: center; /* Alinea horizontalmente los elementos hijos en el centro */
+    background: url('https://e1.pxfuel.com/desktop-wallpaper/616/918/desktop-wallpaper-deer-digtial-vector-art-forest-vector.jpg') no-repeat; /* Establece una imagen de fondo y evita que se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Alinea la imagen de fondo en el centro */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo del documento como 100% de la altura de la ventana */
+    }
+    
+    /* Modificaciones en estilos para el elemento con la clase 'login-form' */
+    
+    .login-form {
+    position: absolute; /* Establece la posición del elemento como absoluta */
+    top: 50%; /* Coloca el elemento en la mitad superior del padre */
+    left: 50%; /* Coloca el elemento en la mitad izquierda del padre */
+    transform: translate(-50%, -50%); /* Translada el elemento en su centro real para que quede centrado */
+    width: 600px; /* Establece un ancho fijo de 600 píxeles para el elemento */
+    max-width: 100%; /* Establece el ancho máximo del elemento como el ancho máximo disponible */
+    height: 500px; /* Establece una altura fija de 500 píxeles para el elemento */
+    background-color: transparent; /* Establece el color de fondo del elemento como transparente */
+    border: 2px solid grey; /* Establece un borde sólido de 2 píxeles con color gris alrededor del elemento */
+    border-radius: 20px; /* Establece un radio de borde de 20 píxeles para hacerlo redondeado */
+    backdrop-filter: blur(20px); /* Aplica un desenfoque de 20 píxeles al fondo del elemento */
+    box-shadow: 0 0 30px black; /* Agrega una sombra alrededor del elemento */
+    display: flex; /* Establece el modelo de caja como flexible */
+    flex-direction: column; /* Establece la dirección de los elementos hijos como columna */
+    justify-content: center; /* Alinea verticalmente los elementos hijos en el centro */
+    }
+    
+    .login-form h2 {
+    padding: 10%; /* Establece un relleno del 10% dentro del elemento */
+    text-align: center; /* Alinea el texto en el centro */
+    font-family: 'Playfair Display', serif; /* Establece la fuente del texto como 'Playfair Display' o una fuente serif similar */
+    }
+    
+    .login-form input[type="password"],
+    .login-form input[type="text"] {
+    font-family: 'Playfair Display', serif; /* Establece la fuente del texto como 'Playfair Display' o una fuente serif similar */
+    background: transparent; /* Establece el fondo del elemento como transparente */
+    border: none; /* Elimina el borde del elemento */
+    outline: none; /* Elimina el contorno alrededor del elemento cuando está enfocado */
+    border-bottom: 2px solid #162938; /* Establece un borde inferior de 2 píxeles sólido con color #162938 */
+    margin: 10px; /* Establece un margen de 10 píxeles alrededor del elemento*/
+    padding: 10px; /* Establece un relleno de 10 píxeles dentro del elemento */
+    }
+    
+    /* Modificaciones en estilos para el elemento con la clase 'btn-login' */
+    
+    .btn-login {
+    width: 100%; /* Establece un ancho del 100% para el elemento*/
+    padding: 15px; /* Establece un relleno de 15 píxeles dentro del elemento */
+    background-color: rgb(76, 162, 5); /* Establece el color de fondo del elemento como rgb(76, 162, 5) */
+    border: 0; /* Elimina el borde del elemento */
+    box-sizing: border-box; /* Ajusta el tamaño del elemento incluyendo el borde y el relleno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del elemento */
+    font-weight: bold; /* Establece el grosor de la fuente como negrita*/
+    font-size: large; /* Establece el tamaño de fuente del texto como grande */
+    color: white; /* Establece el color del texto como blanco */
+    }
+    
+    /* Modificaciones en estilos para el elemento con la clase 'btn-register' */
+    
+    .btn-register {
+    width: 100%; /* Establece un ancho del 100% para el elemento */
+    padding: 15px; /* Establece un relleno de 15 píxeles dentro del elemento */
+    background-color: rgb(76, 162, 5); /* Establece el color de fondo del elemento como rgb(76, 162, 5) */
+    border: 0; /*Elimina el borde del elemento */
+    box-sizing: border-box; /* Ajusta el tamaño del elemento incluyendo el borde y el relleno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del elemento */
+    font-weight: bold; /* Establece el grosor de la fuente como negrita */
+    font-size: large; /* Establece el tamaño de fuente del texto como grande*/
+    color: white; /* Establece el color del texto como blanco */
+    text-align: center;/* Centra el contenido del elemento horizontalmente */
 }
-
-.login-form input[type = "password"],
-.login-form input[type = "text"] {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ced4da;
-    margin-bottom:10px;
-    box-sizing: border-box;
-}
-
-.btn-login {
-    width: 100%;
-    padding: 15px;
-    background-color: rgb(76, 162, 5);
-    border: 0;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: large;
-    color: white;
-}
-
-.btn-login:hover, btn-login:active{
-    color: white;
-    background-color: #165c19;
-    border-color: #165c19;
-}
-
-.btn-login:focus{
-    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
-}
-
-.btn-register{
-    width: 100%;
-    padding: 15px;
-    background-color: gray;
-    border: 0;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    font-size: large;
-    color: black;
-    margin-top: 20px;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-}
-
-.btn-register:hover, btn-register:active{
-    color: white;
-    background-color: #10b981;
-    border-color: #10b981;
-}
-
-.btn-register:focus{
-    box-shadow: 0 0 0 3px #10b981;
-}
+    
+    /* Modificaciones en estilos para el elemento con la clase 'btn-register' cuando está enfocado */
+    
+    .login-form input:focus {
+    border-bottom-color: #59daeb; /* Cambia el color del borde inferior cuando el elemento está enfocado */
+    }
+    
+    /* Modificaciones en estilos para el elemento con la clase 'btn-register' cuando se le pasa el cursor por encima o se hace clic */
+    
+    .btn-register:hover,
+    btn-register:active {
+    color: white; /* Establece el color del texto como blanco */
+    background-color: #28cdd8c5; /* Establece el color de fondo del elemento como #28cdd8c5 */
+    border-color: #28cdd8c5; /* Establece el color del borde del elemento como #28cdd8c5 */
+    }
