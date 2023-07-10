@@ -16,7 +16,7 @@ app.use('/payment',pay);//se generalizan las rutas de los pagos
 //se busca conectarse a la base de datos
 try {
     db.authenticate()
-    console.log('conexion exitosa a la bd');
+    console.log('conexion exitosa a la database');
 } catch (error) {
     console.log(`el error de conexion fue ${error}`);
 }
