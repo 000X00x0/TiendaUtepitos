@@ -1,43 +1,137 @@
-.cart {/*se le da poscion al carro*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cartItem {/*se le da posicion a cada item del carrito cuando se ingresa*/
-    width: 700px;
-    height: 250px;
-    display: flex;
-  
-    align-items: center;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    margin: 30px;
-  }
-  
-  .cartItem img { /*propiedades de las imagenes de los productos*/
-    width: 200px;
-  }
-  
-  .cartItem .description {
-    width: 100%;
-    font-size: 30px;
-  }
-  
-  .countHandler input {
-    width: 40px;
-    text-align: center;
-    font-weight: bolder;
-  }
-  
-  .checkout button {
-    width: 150px;
-    height: 50px;
-    background-color: rgb(82, 175, 6);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    margin: 10px;
-    cursor: pointer;
-  }
+.cart {
+  position: absolute; /* Posiciona el elemento de forma absoluta */
+  top: 50%; /* Centra verticalmente el elemento */
+  left: 50%; /* Centra horizontalmente el elemento */
+  transform: translate(-50%, -50%); /* Ajusta el centrado del elemento */
+  width: 400px; /* Ancho del recuadro */
+  height: 400px; /* Alto del recuadro */
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #162938; /* Borde del recuadro */
+  border-radius: 10px; /* Radio de los bordes */
+  backdrop-filter: blur(5px); /* Aplica el efecto de difuminado */
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); /* Sombra del recuadro */
+  display: flex; /* Usa el modelo de caja flexible */
+  flex-direction: column; /* Dirección de los elementos hijos */
+  justify-content: center; /* Centra verticalmente los elementos hijos */
+  align-items: center; /* Centra horizontalmente los elementos hijos */
+  padding: 20px; /* Espaciado interno */
+}
+
+.cart h2 {
+  font-size: 24px; /* Tamaño de fuente del título */
+  font-weight: bold; /* Grosor de fuente del título */
+  margin-bottom: 10px; /* Margen inferior del título */
+}
+
+.cart form {
+  display: flex; /* Usa el modelo de caja flexible */
+  flex-direction: column; /* Dirección de los elementos hijos */
+  align-items: center; /* Centra horizontalmente los elementos hijos */
+}
+
+.cart .formGroup {
+  margin-bottom: 20px; /* Margen inferior de cada grupo de formulario */
+}
+
+.cart label {
+  font-size: 16px; /* Tamaño de fuente de las etiquetas */
+  font-weight: bold; /* Grosor de fuente de las etiquetas */
+}
+
+.cart input {
+  width: 100%; /* Ancho de los campos de entrada */
+  height: 40px; /* Alto de los campos de entrada */
+  border: none; /* Sin borde */
+  border-bottom: 2px solid #162938; /* Borde inferior */
+  background-color: transparent; /* Fondo transparente */
+  font-size: 14px; /* Tamaño de fuente de los campos de entrada */
+  padding: 5px; /* Relleno interno */
+  transition: border-color 0.3s; /* Transición del color del borde */
+}
+
+.cart input:focus {
+  outline: none; /* Sin contorno al enfocar */
+  border-bottom-color: #59daeb; /* Color del borde inferior al enfocar */
+}
+
+.cart button[type="submit"] {
+  width: 150px; /* Ancho del botón de envío */
+  height: 40px; /* Alto del botón de envío */
+  background-color: #162938; /* Color de fondo del botón de envío */
+  color: white; /* Color de texto del botón de envío */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Radio de los bordes */
+  cursor: pointer; /* Cursor al pasar por encima */
+  font-size: 16px; /* Tamaño de fuente del botón de envío */
+  font-weight: bold; /* Grosor de fuente del botón de envío */
+  transition: background-color 0.3s; /* Transición del color de fondo */
+}
+
+.cart button[type="submit"]:hover {
+  background-color: #0d1b2c; /* Color de fondo del botón de envío al pasar por encima */
+}
+
+.cart .message {
+  margin-top: 10px; /* Margen superior del mensaje */
+  font-size: 14px; /* Tamaño de fuente del mensaje */
+  color: #777; /* Color del texto del mensaje */
+}
+
+.shoppingCart {
+  position: absolute; /* Posiciona el elemento de forma absoluta */
+  top: 50%; /* Centra verticalmente el elemento */
+  left: 50%; /* Centra horizontalmente el elemento */
+  transform: translate(-50%, -50%); /* Ajusta el centrado del elemento */
+  width: 400px; /* Ancho del recuadro */
+  height: 400px; /* Alto del recuadro */
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #162938; /* Borde del recuadro */
+  border-radius: 10px; /* Radio de los bordes */
+  backdrop-filter: blur(5px); /* Aplica el efecto de difuminado */
+  box-shadow: 0px 3px 15px rgba(0,0, 0, 0, 0.2); /* Sombra del recuadro */
+  display: flex; /* Usa el modelo de caja flexible */
+  flex-direction: column; /* Dirección de los elementos hijos */
+  justify-content: center; /* Centra verticalmente los elementos hijos */
+  align-items: center; /* Centra horizontalmente los elementos hijos */
+  padding: 20px; /* Espaciado interno */
+}
+
+.shoppingCart h2 {
+  font-size: 24px; /* Tamaño de fuente del título */
+  font-weight: bold; /* Grosor de fuente del título */
+  margin-bottom: 10px; /* Margen inferior del título */
+}
+
+.shoppingCart ul {
+  list-style-type: none; /* Quita los estilos de lista */
+  padding: 0; /* Sin relleno interno */
+}
+
+.shoppingCart li {
+  margin-bottom: 5px; /* Margen inferior de cada elemento de la lista */
+}
+
+.shoppingCart button {
+  background-color: #162938; /* Color de fondo del botón */
+  color: #fff; /* Color de texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Radio de los bordes */
+  padding: 5px 10px; /* Relleno interno */
+  cursor: pointer; /* Cursor al pasar por encima */
+  font-size: 14px; /* Tamaño de fuente del botón */
+  font-weight: bold; /* Grosor de fuente del botón */
+  transition: background-color 0.3s; /* Transición del color de fondo */
+}
+
+.shoppingCart button:hover {
+  background-color: #0d1b2c; /* Color de fondo del botón al pasar por encima */
+}
+
+.shoppingCart .total {
+  font-weight: bold; /* Grosor de fuente del total */
+  margin-top: 10px; /* Margen superior del total */
+}
+
+.shoppingCart .availableProducts {
+  margin-top: 20px; /* Margen superior de los productos disponibles */
+}

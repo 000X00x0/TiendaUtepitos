@@ -1,87 +1,52 @@
 .shopTitle {
-    margin-top: 100px;
-    text-align: center;
-    font-size: 40px;
-  }
-  .products {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    place-items: center;
-    justify-content: center;
-  }
-  
-  .product {
-    border-radius: 15px;
-    width: 400px;
-    height: 500px;
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 2px 2px 22px;
-  }
-  
-  @keyframes slide {
-    0% {margin-left: 0%;}
-    33% {margin-left: 0%;}
+  margin-top: 100px; /* Establece un margen superior de 100 píxeles */
+  text-align: center; /* Centra el texto horizontalmente dentro de su contenedor */
+  font-size: 40px; /* Establece el tamaño de fuente en 40 píxeles */
+}
 
-    35% {margin-left: -100%;}
-    66% {margin-left: -100%;}
+.products {
+  width: 100%; /* Establece el ancho al 100% del contenedor */
+  height: auto; /* Ajusta automáticamente la altura según su contenido */
+  display: flex; /* Establece el contenedor de productos como un flex container */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas dentro del contenedor */
+  place-items: center; /* Centra vertical y horizontalmente los elementos dentro de su contenedor */
+  justify-content: center; /* Centra horizontalmente los elementos dentro de su contenedor */
+}
 
-    69% {margin-left: -200%;}
-    99% {margin-left: -200%;}
-  }
+.product {
+  border-radius: 15px; /* Establece un borde redondeado de 15 píxeles */
+  width: 400px; /* Establece el ancho del producto en 400 píxeles */
+  height: 500px; /* Establece la altura del producto en 500 píxeles */
+  margin: 50px; /* Establece un margen exterior de 50 píxeles en todas las direcciones */
+  display: flex; /* Establece el producto como un flex container */
+  flex-direction: column; /* Establece la dirección de los elementos secundarios en columna */
+  justify-content: center; /* Centra verticalmente los elementos dentro de su contenedor */
+  align-items: center; /* Centra horizontalmente los elementos dentro de su contenedor */
+  box-shadow: 2px 2px 22px; /* Agrega una sombra alrededor del producto */
+  background-color: rgba(165, 26, 230, 0.527); /* Establece el color de fondo con transparencia */
+  color: rgb(255, 255, 255); /* Establece el color del texto en blanco */
+  transition: transform 0.5s ease; /* Aplica una transición suave de 0.5 segundos al transformar el producto */
+}
 
- .slide-var {
-    width: 50%;
-    margin: 50px auto 0;
-    overflow: hidden;
- }
+.product:hover {
+  transform: scale(1.5); /* Escala el producto al 150% en el estado de desplazamiento */
+  transform-origin: 50% 50%; /* Establece el punto de origen de la transformación en el centro del producto */
+  transform: scale(1.05); /* Escala el producto al 105% en el estado de desplazamiento */
+}
 
- .slide-var ul {
-    display: flex;
-    padding: 0;
-    width: 300%;
-    animation: slide 12s infinite alternate ease-in-out;
- }
+.addToCartBttn {
+  background-color: transparent; /* Establece el color de fondo transparente */
+  border: 2px solid rgb(19, 19, 19); /* Establece un borde sólido de 2 píxeles en color negro */
+  min-width: 100px; /* Establece el ancho mínimo del botón en 100 píxeles */
+  padding-left: 10px; /* Agrega un relleno interno de 10 píxeles en el lado izquierdo del botón */
+  padding-right: 10px; /* Agrega un relleno interno de 10 píxeles en el lado derecho del botón */
+  padding-top: 5px; /* Agrega un relleno interno de 5 píxeles en la parte superior del botón */
+  padding-bottom: 5px; /* Agrega un relleno interno de 5 píxeles en la parte inferior del botón */
+  border-radius: 15px; /* Establece un borde redondeado de 15 píxeles */
+}
 
- .slide-var li {
-    list-style: none;
-    width: 100%;
- }
-
- .slide-var img {
-    width: 100%;
- }
-  
-  .product .description {
-    text-align: center;
-  }
-  .product .descripcion {
-    font-size: 15px;
-  }
-  
-  .product:hover {
-    transition: 0.3s ease-in;
-    cursor: pointer;
-  }
-  
-  .addToCartBttn {
-    background-color: transparent;
-    border: 2px solid rgb(19, 19, 19);
-    min-width: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 15px;
-  }
-  
-  .addToCartBttn:hover {
-    background-color: rgb(19, 19, 19);
-    color: white;
-    cursor: pointer;
-  }
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19); /* Establece el color de fondo en negro al pasar el cursor sobre el botón */
+  color: white; /* Establece el color del texto en blanco */
+  cursor: pointer; /* Cambia el cursor del mouse a un ícono de puntero */
+}

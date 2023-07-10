@@ -1,35 +1,36 @@
 import React, {useContext} from 'react';
-import { ShopContext } from "../../context/shop-context";//importamos el context
-import { CartItem } from './cart-item'; //importamos el cartitem para cada item que se ingrese en el carrito
-import "./cart.css"; //vinculamos el css
-import { useNavigate } from 'react-router-dom' //se importa para poder redireccionar
-import axios from 'axios';//se usa para hacer peticiones al servidor
+import { ShopContext } from "../../context/shop-context"; // Importamos el contexto
+import { CartItem } from './cart-item'; // Importamos el componente CartItem para cada elemento en el carrito
+import "./cart.css"; // Importamos el archivo CSS para los estilos
+import { useNavigate } from 'react-router-dom'; // Importamos el hook useNavigate para la navegación
+import axios from 'axios'; // Importamos axios para hacer peticiones al servidor
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const URI = 'http://localhost:3001/products/';//esta sera la ruta en la cual se haran las peticiones
+const URI = 'http://localhost:3001/products/'; // Ruta base para las peticiones al servidor
 
 export const Cart = () => {
-    const context = useContext(ShopContext);//variable para usar el contexto
-    const { cartItems, getTotalCartAmount } = useContext(ShopContext); //aqui almacenamos los elementos del carrito
-    const totalAmount = getTotalCartAmount(); //aqi se almacena el total de la compra
-    const navigate = useNavigate();//se usa para navegar entre direcciones
+    const context = useContext(ShopContext); // Obtenemos el contexto de la tienda
+    const { cartItems, getTotalCartAmount } = useContext(ShopContext); // Obtenemos los elementos del carrito y la función para obtener el total de la compra
+    const totalAmount = getTotalCartAmount(); // Obtenemos el total de la compra
+    const navigate = useNavigate(); // Utilizamos el hook useNavigate para la navegación
 
-    const[products, setProducts] = useState([])//aqui se almacenan todos los productos
+    const [products, setProducts] = useState([]); // Estado para almacenar los productos
+
     useEffect(() => {
-        getProducts()
+        getProducts();
     }, []);
 
-    const getProducts = async () => {//aqui se obtienen todos los productos
-        const res = await axios.get(URI)
-        setProducts(res.data)
-    }
+    const getProducts = async () => { // Función para obtener los productos del servidor
+        const res = await axios.get(URI); // Realizamos una petición GET al servidor
+        setProducts(res.data); // Actualizamos el estado con los productos obtenidos
+    };
 
-    const buy = async (e) => {
+    const buy = async (e) => { // Función para procesar el pago y redirigir al portal de pago
         e.preventDefault();
         console.log(cartItems);
-        await axios.put(URI + 'buy', {//se envian con este metodo para poder actualizar la base de datos desde el back
-            "1": cartItems[1],
+        await axios.put(URI + 'buy', { // Realizamos una petición PUT al servidor para procesar el pago
+            "1": cartItems[1], // Enviamos los elementos del carrito al servidor
             "2": cartItems[2],
             "3": cartItems[3],
             "4": cartItems[4],
@@ -43,31 +44,31 @@ export const Cart = () => {
         .then((res) => {
             alert(res);
         }).catch((err) => {
-            alert(err.message)
+            alert(err.message);
         });
-        context.setPayAumount(totalAmount); //antes de pasar al portal de pago se agrega en el context el valor de la compra para poder cobrar ese monto
-        navigate('/stripe');//se navega hacia la pagina de pago
-    }
+        context.setPayAumount(totalAmount); // Antes de redirigir al portal de pago, actualizamos el contexto con el valor de la compra
+        navigate('/stripe'); // Navegamos hacia la página de pago
+    };
 
     return (
         <div className="cart">
             <div> 
-                <h1> Your Cart Items</h1>
+                <h1> Your Cart Items</h1> {/* Título del carrito */}
             </div>
             <div className="cartItems">
-                {products.map((product) => {
-                    if (cartItems[product.id] !== 0) {{/*para cada producto lo mostramos */}
-                        return <CartItem data={product} />;
+                {products.map((product) => { // Mapeamos los productos del carrito
+                    if (cartItems[product.id] !== 0) { // Si el producto tiene una cantidad mayor a 0 en el carrito
+                        return <CartItem data={product} />; // Renderizamos el componente CartItem para ese producto
                     }
                 })}
             </div>
-            {totalAmount > 0 ? //si el total es mayor que 0
+            {totalAmount > 0 ? // Si el total de la compra es mayor a 0
             <div className="checkout">
-                <p> Subtotal: ${totalAmount}</p>{/*imprime el total de la compra calculado */}
-                <button onClick={() => navigate ("/shop")}> Continue Shopping</button>{/*si se le da click se devuelve a la tienda principal */}
-                <button onClick={buy}> Checkout </button>{/*si se le da clic llama a la funcion buy que lleva a procesar el pago */}
+                <p> Subtotal: ${totalAmount}</p> {/* Muestra el subtotal de la compra */}
+                <button onClick={() => navigate ("/shop")}> Continue Shopping</button> {/* Botón para volver a la tienda */}
+                <button onClick={buy}> Checkout </button> {/* Botón para procesar el pago */}
             </div>
-            : <h1> Your Cart is Empty </h1>}
+            : <h1> Your Cart is Empty </h1>} {/* Mensaje si el carrito está vacío */}
         </div>
     )
 };
