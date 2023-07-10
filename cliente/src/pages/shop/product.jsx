@@ -6,9 +6,9 @@ export const Product = (props) => {
         <div className="product"> {/*aqui se muestran las informaciones de los productos en la pagina principal */}
             <div className="slide-var">
                 <ul>
-                    <li><img src={img1} alt={nombre}/></li>{/*este es el carrusel para las imagenes */}
-                    <li><img src={img2} alt={nombre}/></li>
-                    <li><img src={img3} alt={nombre}/></li>
+                    <li><img id="img" src={img1} alt={nombre}/></li>{/*este es el carrusel para las imagenes */}
+                    <li><img id="img" src={img2} alt={nombre}/></li>
+                    <li><img id="img" src={img3} alt={nombre}/></li>
                 </ul>
             </div>
             <div className="descripcion">
