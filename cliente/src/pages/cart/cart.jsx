@@ -4,10 +4,10 @@ import { CartItem } from './cart-item'; // Importamos el componente CartItem par
 import "./cart.css"; // Importamos el archivo CSS para los estilos
 import { useNavigate } from 'react-router-dom'; // Importamos el hook useNavigate para la navegación
 import axios from 'axios'; // Importamos axios para hacer peticiones al servidor
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState } from 'react'; // Con el usestate accedemos al estado de un componente funcional, de forma que podemos actualizarlo o cambiarlo
+import { useEffect } from 'react'; // Con el useEffect, accedemos a los efectos secundarios de un componente funcional cuando este se inicia.
 
-const URI = 'http://localhost:3001/products/'; // Ruta base para las peticiones al servidor
+const URI = 'http://localhost:3001/products/'; // Ruta base para las peticiones al servidor.
 
 export const Cart = () => {
     const context = useContext(ShopContext); // Obtenemos el contexto de la tienda
